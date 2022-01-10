@@ -1,0 +1,49 @@
+<%- include("../partials/header") %> 
+
+
+<div class="container">
+    
+    <h1>Working fine</h1>
+    <br>
+    <h3>User: </h3>
+    <ul>
+        <li><a href="/user/login">Go To Login</a></li>
+        <li><a href="/user/register">Go To Register</a></li>
+    </ul>
+    <br>
+    <h3>Mechanic: </h3>
+    <ul>
+        <li><a href="/mechanic/login">Go To Login</a></li>
+        <li><a href="/mechanic/register">Go To Register</a></li>
+    </ul>
+</div>
+<!-- 
+<p>Click the button to get your coordinates.</p>
+
+<button onclick="getLocation()">Try It</button>
+
+<p id="demo"></p>
+
+<script>
+    var x = document.getElementById("demo");
+    
+    function getLocation() {
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition);
+      } else { 
+        x.innerHTML = "Geolocation is not supported by this browser.";
+      }
+    }
+    
+    function showPosition(position) {
+      x.innerHTML = "Latitude: " + position.coords.latitude + 
+      "<br>Longitude: " + position.coords.longitude;
+    }
+    </script>
+ -->
+
+
+<%- include("../partials/footer") %> 
+
+
+    
