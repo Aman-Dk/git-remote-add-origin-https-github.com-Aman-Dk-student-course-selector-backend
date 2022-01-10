@@ -4,7 +4,7 @@ const router = express.Router()
 const Student = require('../models/student')
 
 
-router.get('/students',async(req,res)=>{
+router.get('/api/students',async(req,res)=>{
     try {
         if(!req.isAuthenticated()){
             res.send('Login to View')
@@ -18,7 +18,7 @@ router.get('/students',async(req,res)=>{
     }
 })
 
-router.patch('/updateCourse',async(req,res)=>{
+router.patch('/api/updateCourse',async(req,res)=>{
 
     // try {
     //     if(!req.isAuthenticated()){

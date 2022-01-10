@@ -6,7 +6,7 @@ const passport = require('passport')
 
 const Admin = require('../models/admin')
 
-router.get('/fakeUser',async(req,res)=>{
+router.get('/api/fakeUser',async(req,res)=>{
     const admin = new Admin({username:'admin',email:'admin@gmail.com'})
     await Admin.register(admin,'123').then((admin)=>{
         res.send(admin)
@@ -16,29 +16,29 @@ router.get('/fakeUser',async(req,res)=>{
 
 })
 
-router.get('/',(req,res)=>{
+router.get('/api/',(req,res)=>{
 
     res.send('HomePage')
 
 })
 
-router.get('/list',(req,res)=>{
+router.get('/api/list',(req,res)=>{
     try {
         if(!req.isAuthenticated()){
             res.send('Login to View')
         }
-        res.redirect('/students')
+        res.redirect('/api/students')
     } catch (error) {
         console.log(error.message);
     }
 })
 
-router.get('/login',async(req,res)=>{
+router.get('/api/login',async(req,res)=>{
     res.render('admin/auth/login')
 })
 
 //login admin
-router.post('/login', 
+router.post('/api/login', 
     passport.authenticate('local', 
                     {                        
                         // failureRedirect: '/login',
@@ -55,9 +55,9 @@ router.post('/login',
 )
 
 // logout user
-router.get('/admin/logout', (req,res)=>{
+router.get('/api/admin/logout', (req,res)=>{
     req.logout();
-    res.redirect('/login');
+    res.redirect('/api/login');
 })
 
 
