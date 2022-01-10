@@ -49,7 +49,7 @@ router.post('/api/login',
                         // console.log(`MECHANIC - loggedIN as ${req.user.username}`);
                         // req.flash('success',`Welcome Back ${req.user.username}`);
                         // res.send('loggedIN Successfully as' + req.user)
-                        res.redirect('/list')
+                        res.redirect('/api/list')
                         // res.send('success' + req.user.username)
                     }
 )
